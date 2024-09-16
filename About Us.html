@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Spring Hills IT Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #1E2D3B;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            height: 150px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 1.5rem;
+        }
+
+        nav ul li a {
+            color: skyblue;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: blue;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: rgb(155, 151, 151);
+        }
+
+        .section {
+            width: calc(33.33% - 30px);
+            margin-bottom: 40px;
+            text-align: justify;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1E2D3B;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            overflow: hidden;
+            max-height: 150px; /* Adjust as needed */
+            transition: max-height 0.5s ease;
+        }
+
+        .section p.full {
+            max-height: none;
+        }
+
+        .consultation-btn {
+            background-color: skyblue;
+            color: #1E2D3B;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .consultation-btn:hover {
+            background-color: blue;
+            color: white;
+        }
+        .about-us-btn{
+            background-color: skyblue;
+            color: #1E2D3B;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            
+        }
+
+        .about-us-btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SH IT solutions Agency.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="contact Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="consultation-btn" onclick="window.location.href='Consultation.html'">Consultation</button>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>About Us</h2>
+            <p>With a passion for problem-solving and a commitment to excellence, 
+                we provide top-notch IT solutions tailored to your unique needs. 
+                At Spring Hills, we envision a future where technology is seamlessly 
+                integrated into every aspect of our lives, driving innovation, efficiency, and growth. 
+                As a leading provider of IT solutions, our comprehensive services include 
+                <a href="Blog Folder/Secure your Wi-Fi network.html">Network Security,</a> 
+                <a href="Blog Folder/Use encryption for sensitive data.html">Data Management,</a>  
+                <a href="Blog Folder/Keep software up to date.html">Software Development,</a> 
+                <a href="Blog Folder/Regularly back up data.html">Data Back-Up and Disaster Recovery,</a> 
+                <a href="Blog Folder/Implement multi factor authentication.html">Cybersecurity Awareness Training,</a> 
+                and 
+                <a href="Request Consultation.html">IT Consulting</a> among others. 
+                We believe in building strong, lasting relationships based on trust, transparency, and exceptional service. 
+                Together, let's harness the power of technology to pave the way to a brighter, 
+                more innovative future</p>
+            <button onclick="toggleText(this)" class="about-us-btn">Read More</button>
+        </div>
+        <div class="section">
+            <h2>Mission</h2>
+            To be your dedicated partners in navigating the ever-evolving world of technology. 
+            With a passion for problem-solving and a commitment to excellence, 
+            we provide top-notch IT solutions tailored to your unique needs. 
+            Our comprehensive services, backed by a team of seasoned professionals, 
+            address a wide range of IT challenges, 
+            from troubleshooting technical issues to implementing cutting-edge solutions. 
+            We believe in building strong, lasting relationships based on trust, transparency, and exceptional 
+            service. Together, let's harness the power of technology to drive your success and achieve your 
+            goals.
+        </div>
+        <div class="section">
+            <h2>Vision</h2>
+            To be the leading provider of innovative 
+            IT solutions that empower individuals and businesses to thrive in a digital world. 
+            We envision a future where technology is seamlessly integrated into every aspect of our lives, 
+            driving innovation, efficiency, and growth. Through our unwavering dedication to our clients 
+            and our commitment to excellence, we strive to pave the way to a brighter, more innovative future. 
+            Together, let's shape the future of technology and unlock new possibilities for success.
+        </div>
+    </div>
+
+    <script>
+        function toggleText(btn) {
+            var text = btn.previousElementSibling;
+            text.classList.toggle("full");
+            if (btn.innerHTML === "Read More") {
+                btn.innerHTML = "Read Less";
+            } else {
+                btn.innerHTML = "Read More";
+            }
+        }
+    </script>
+    <footer>
+        © 2024 Captain Morgan & Alexa. All rights reserved
+    </footer>
+</body>
+</html>

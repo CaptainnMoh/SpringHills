@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-...your-sha512-hash...==" crossorigin="anonymous" />
+    <title>Blog - Spring Hills IT Solutions</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: whitesmoke;
+      }
+
+      header {
+        background-color: #1e2d3b;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .logo img {
+        height: 150px;
+        width: auto;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-right: 1.5rem;
+      }
+
+      nav ul li a {
+        color: skyblue;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: blue;
+      }
+
+      .consultation-btn {
+        background-color: skyblue;
+        color: #1e2d3b;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .consultation-btn:hover {
+        background-color: blue;
+        color: white;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: rgb(155, 151, 151);
+        }
+         .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-bar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .search-bar button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .search-bar button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+        .blog-post {
+        display: flex;
+        flex-wrap:raw;
+        margin-bottom: 20px;
+        background-color:rgb(199, 199, 199);
+        padding-bottom:20px;
+        border-radius:5px;
+        }
+        .blog-post-image img{
+            padding:20px 40px 0px 40px;
+            border-radius:10px;
+            
+        }
+        .blog-post img{
+            width:250px;
+            height:100%;
+        }
+        .blog-post-text{
+            padding-left:40px;
+        }
+      .blog-post h2 {
+        margin-bottom: 10px;
+      }
+
+      .blog-post p {
+        font-size: 1.1rem;
+        overflow: hidden;
+        max-height: 120px;
+        transition: max-height 0.3s ease;
+      }
+
+      .read-more-btn {
+        background-color: skyblue;
+        color: #1e2d3b;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .read-more-btn:hover {
+        background-color: blue;
+        color: white;
+      }
+ .pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Button styling */
+  .pagination button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor on hover */
+    margin: 0 5px; /* Margin between buttons */
+    font-size: 16px; /* Font size */
+  }
+
+  /* Hover effect */
+  .pagination button:hover {
+    background-color: #0056b3; /* Darker blue */
+  }
+      .expanded {
+        max-height: none;
+      }
+      .back-to-top-icon {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        background-color: skyblue;
+        color: white;
+        width: 130px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+      }
+
+      .back-to-top-icon:hover {
+        opacity: 0.8;
+        background-color: blue;
+      }
+
+      .back-to-top-icon span {
+        margin-left: 5px;
+      }
+
+      .back-to-top-icon svg{
+        fill: currentColor;
+        top:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="SH IT solutions Agency.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <button
+        class="consultation-btn"
+        onclick="window.location.href='Consultation.html'"
+      >
+        Consultation
+      </button>
+    </header>
+
+    <div class="container">
+<!-- Search bar -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search articles...">
+  <i class="fas fa-search" onclick="searchArticles()"></i>
+</div>
+            <div class="more-blog-post">
+        <h2>10 Tips for Cybersecurity in Small Businesses</h2>
+        <p>
+          We provide comprehensive network security solutions to safeguard your
+          business against cyber threats and ensure data protection. Small
+          businesses are often the target of cyber attacks due to their limited
+          resources and lack of robust security measures. Here are 10 tips to
+          enhance cybersecurity:
+        </p>
+        <ul>
+          <li>
+            <a href="Blog Folder/Keep software up to date.html"
+              >software up to date</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Use strong unique passwords.html"
+              >Use strong, unique passwords</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Implement multi factor authentication.html"
+              >Implement multi-factor authentication</a
+            >
+          </li>
+          <li>
+            <a
+              href="Blog Folder/Educate employees about security best practices.html"
+              >Educate employees about security best practices</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Regularly back up data.html"
+              >Regularly back up data</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Secure your Wi-Fi network.html"
+              >Secure your Wi-Fi network</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Monitor for suspicious activity.html"
+              >Monitor for suspicious activity</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Use encryption for sensitive data.html"
+              >Use encryption for sensitive data</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Limit access to sensitive information.html"
+              >Limit access to sensitive information</a
+            >
+          </li>
+          <li>
+            <a href="Blog Folder/Stay informed about the latest threats.html"
+              >Stay informed about the latest threats</a
+            >
+          </li>
+        </ul>
+        <button class="read-more-btn">Read More</button>
+      </div>
+</div>
+    </div>
+
+    <div class="blog-post">
+      <div class="blog-post-image">
+        <img src="pictures/backup-and-recovery.png">
+      </div>
+      <div class="blog-post-text">
+        <h2>The Importance of Data Backup and Recovery</h2>
+        <p>
+          Data loss can be catastrophic for businesses. Learn why data backup
+          and recovery are essential components of any comprehensive IT
+          strategy. Implementing a robust backup and recovery plan...
+        </p>
+        <button class="read-more-btn" onclick="redirectToDataBackupPage()">Read More</button>
+      </div>
+    </div>
+
+    <!-- Sample Blog Post 2 -->
+    <div class="blog-post">
+      <div class="blog-post-image">
+        <img src="pictures/How-to-Choose-the-Ideal-Custom-Software-Development-Company-for-your-Project.jpg">
+      </div>
+      <div class="blog-post-text">
+        <h2>How to Choose the Right Software Development Company</h2>
+        <p>
+          Choosing the right software development company is crucial for the
+          success of your project. Here are some factors to consider when making
+          your decision. Look for a company with...
+        </p>
+        <button class="read-more-btn" onclick="redirectToSoftwareDevelopmentPage()">Read More</button>
+      </div>
+    </div>
+    <div class="blog-post">
+  <div class="blog-post-image">
+    <img src="pictures/cloudcomputing.jpg">
+  </div>
+  <div class="blog-post-text">
+    <h2>Understanding Cloud Computing</h2>
+    <p>
+      Cloud computing is transforming the way businesses operate by providing scalable and cost-effective solutions. Learn about the benefits of moving your business to the cloud...
+    </p>
+    <button class="read-more-btn" onclick="redirectToCloudComputingPage()">Read More</button>
+  </div>
+</div>
+
+<div class="blog-post">
+  <div class="blog-post-image">
+    <img src="pictures/cyber-security.jpg">
+  </div>
+  <div class="blog-post-text">
+    <h2>Importance of Cybersecurity in Today's Digital Age</h2>
+    <p>
+      With the increasing reliance on digital platforms, cybersecurity has become a critical concern for businesses. Discover why cybersecurity should be a priority for your business...
+    </p>
+    <button class="read-more-btn" onclick="redirectToCybersecurityPage()">Read More</button>
+  </div>
+</div>
+
+<div class="blog-post">
+  <div class="blog-post-image">
+    <img src="pictures/The-Benefits-of-Data-Science-for-Businesses.jpg">
+  </div>
+  <div class="blog-post-text">
+    <h2>Unlocking Business Value with Data Science</h2>
+    <p>
+      Data science is revolutionizing how businesses make decisions. Explore how data science can unlock significant value for your business...
+    </p>
+    <button class="read-more-btn" onclick="redirectToDataSciencePage()">Read More</button>
+  </div>
+</div>
+
+             <!-- Pagination -->
+    <div class="pagination" id="paginationContainer">
+      <button onclick="prevPage()">Previous</button>
+      <button onclick="nextPage()">Next</button>
+    </div>
+  </div>
+    </br>
+
+ 
+
+    <!-- Back to Top icon -->
+    <div id="backToTopBtn" class="back-to-top-icon" onclick="scrollToTop()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-5 -12 24 24"
+        width="23"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path d="M12 2l-5.5 6h11z" />
+        <path fill="none" d="M0 0h24v24H0z" />
+      </svg>
+      <span>Back to Top</span>
+    </div>
+    <footer>
+    © 2024 Captain Morgan & Alexa. All rights reserved
+</footer>
+
+<script>
+  const readMoreButtons = document.querySelectorAll(".read-more-btn");
+
+  readMoreButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const post = button.parentNode;
+      const content = post.querySelector("p");
+
+      if (content.classList.contains("expanded")) {
+        content.classList.remove("expanded");
+        button.innerText = "Read More";
+      } else {
+        content.classList.add("expanded");
+        button.innerText = "Read Less";
+      }
+    });
+  });
+
+  // Pagination functionality
+  let currentPage = 0;
+  const blogsPerPage = 2; // Adjust the number of blogs per page here
+  const blogPosts = document.querySelectorAll('.blog-post');
+  const totalPages = Math.ceil(blogPosts.length / blogsPerPage);
+
+  function showPosts() {
+    const startIndex = currentPage * blogsPerPage;
+    const endIndex = startIndex + blogsPerPage;
+
+    for (let i = 0; i < blogPosts.length; i++) {
+      if (i >= startIndex && i < endIndex) {
+        blogPosts[i].style.display = 'block';
+      } else {
+        blogPosts[i].style.display = 'none';
+      }
+    }
+  }
+
+  function nextPage() {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      showPosts();
+    }
+  }
+
+  function prevPage() {
+    if (currentPage > 0) {
+      currentPage--;
+      showPosts();
+    }
+  }
+
+  function hidePosts() {
+    for (let i = 0; i < blogPosts.length; i++) {
+      if (i >= blogsPerPage) {
+        blogPosts[i].style.display = 'none';
+      }
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    var backToTopBtn = document.getElementById("backToTopBtn");
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  }
+
+  function redirectToDataBackupPage() {
+    window.location.href = "Blog Folder/The Importance of Data Backup and Recovery.html";
+  }
+
+  function redirectToSoftwareDevelopmentPage() {
+    window.location.href = "Blog Folder/How to Choose the Right Software Development Company.html";
+  }
+
+  // Initialize pagination
+  hidePosts();
+  showPosts();
+
+   function searchArticles() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+
+    // Loop through all blog post titles and check if they contain the search term
+    const blogPostTitles = document.querySelectorAll('.blog-post h2');
+    blogPostTitles.forEach(title => {
+      const postTitle = title.innerText.toLowerCase();
+      const post = title.closest('.blog-post');
+      
+      if (postTitle.includes(searchTerm)) {
+        post.style.display = 'block'; // Show the post if it matches the search term
+      } else {
+        post.style.display = 'none'; // Hide the post if it doesn't match
+      }
+    });
+  }
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Software Up To Date - Spring Hills IT Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            background-color: #1E2D3B;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            height: 150px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 1.5rem;
+        }
+
+        nav ul li a {
+            color: skyblue;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: blue;
+        }
+
+        .consultation-btn {
+            background-color: skyblue;
+            color: #1E2D3B;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .consultation-btn:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .landing {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: rgb(155, 151, 151);
+            padding-top: 10px;
+            padding-bottom: 100px;
+        }
+
+        .landingpage {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .landing-text {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .landing-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .landing-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            align-items: left;
+            max-height: 200px;
+            overflow: hidden;
+            
+        }
+
+        .landing-buttons {
+            text-align: right;
+        }
+
+        .landing-buttons button {
+            background-color: skyblue;
+            color: #1E2D3B;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .landing-buttons button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    </style>
+    <script>
+        function expandAbout() {
+            var aboutText = document.getElementById("about-text");
+            var readMoreBtn = document.getElementById("read-more-btn");
+            if (aboutText.style.maxHeight) {
+                aboutText.style.maxHeight = null;
+                readMoreBtn.innerHTML = "Read More";
+            } else {
+                aboutText.style.maxHeight = aboutText.scrollHeight + "px";
+                readMoreBtn.innerHTML = "Read Less";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SH IT solutions Agency.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/About Us.html">About Us</a></li>
+                <li><a href="/Blog.html">Blog</a></li>
+                <li><a href="/Services.html">Services</a></li>
+                <li><a href="/contact Us.html Us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="consultation-btn" onclick="window.location.href='/Consultation.html'">Consultation</button>
+    </header>
+
+    <div class="landing">
+        <div class="landingpage">
+            <div class="landing-text">
+                <h1>Keep Software Up To Date</h1>
+                <p id="about-text">
+                    To ensure optimal performance, security, and compatibility, it's crucial to keep your software up to date. Here are some steps you can take to accomplish this:
+                    <ul>
+                        <li>Enable automatic updates whenever possible. This ensures that your software receives the latest patches and fixes without manual intervention.</li>
+                        <li>Regularly check for manual updates by accessing the settings or preferences within each software application. Some programs may not support automatic updates or require manual confirmation.</li>
+                        <li>Prioritize critical updates, especially those related to security vulnerabilities. Install these updates as soon as they become available to safeguard your system from potential threats.</li>
+                        <li>For specific software, such as web browsers, antivirus programs, and office suites, follow the recommended update procedures provided by the respective developers.</li>
+                        <li>Exercise caution when updating software and ensure that you download updates from official sources to avoid malware or counterfeit versions.</li>
+                        <li>Backup your data regularly, especially before major updates, to mitigate the risk of data loss in case of unexpected issues during the update process.</li>
+                    </ul>
+                    By following these guidelines, you can keep your software up to date and enjoy a seamless computing experience with enhanced performance, reliability, and security.
+                </p>
+        </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Back to Top icon -->
+<div id="backToTopBtn" class="back-to-top-icon" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"/>
+        <path d="M12 2l-5.5 6h11z"/>
+        <path fill="none" d="M0 0h24v24H0z"/>
+    </svg>
+    <span>Back to Top</span>
+</div>
+
+<style>
+    .back-to-top-icon {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        background-color: skyblue;
+        color: white;
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+    }
+
+    .back-to-top-icon:hover {
+        opacity: 0.8;
+        background-color: blue;
+    }
+
+    .back-to-top-icon span {
+        margin-left: 5px;
+    }
+
+    .back-to-top-icon svg {
+        fill: currentColor;
+    }
+</style>
+
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var backToTopBtn = document.getElementById("backToTopBtn");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    }
+</script>
+<footer>
+    © 2024 Captain Morgan & Alexa. All rights reserved
+</footer>
+</body>
+</html>
